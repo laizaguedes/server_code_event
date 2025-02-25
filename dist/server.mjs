@@ -1,12 +1,34 @@
 import {
+  accessInviteLinkRoute
+} from "./chunk-6ISNEXJH.mjs";
+import {
+  getRankingRoute
+} from "./chunk-NENLIZMM.mjs";
+import {
+  getSubscriberInvitesClicksRoute
+} from "./chunk-EVO5L2UI.mjs";
+import {
+  getSubscriberInvitesCountRoute
+} from "./chunk-UGFPIOOI.mjs";
+import {
+  getSubscriberRankingPositionRoute
+} from "./chunk-JVRYI6KJ.mjs";
+import {
   subscribeToEventRoute
-} from "./chunk-WV6JAG2W.mjs";
-import "./chunk-CCQUBMUH.mjs";
-import "./chunk-URTX3HFY.mjs";
+} from "./chunk-AWLGFHNH.mjs";
+import "./chunk-DAIJO2A6.mjs";
+import "./chunk-76WOVQ2F.mjs";
+import "./chunk-NNGOU7IT.mjs";
+import "./chunk-CAGRLTI6.mjs";
+import "./chunk-NCBYNWWU.mjs";
+import "./chunk-7C2ZELRU.mjs";
+import "./chunk-OW2G55XZ.mjs";
+import "./chunk-WOLSDXJ7.mjs";
+import "./chunk-IKAYSH5B.mjs";
+import "./chunk-6VU3PEKP.mjs";
 import {
   env
-} from "./chunk-NFTOJHVO.mjs";
-import "./chunk-7C2ZELRU.mjs";
+} from "./chunk-T7YZC4SA.mjs";
 
 // src/server.ts
 import { fastifyCors } from "@fastify/cors";
@@ -37,6 +59,11 @@ app.register(fastifySwaggerUi, {
   routePrefix: "/docs"
 });
 app.register(subscribeToEventRoute);
-app.listen({ port: env.PORT }).then(() => {
+app.register(accessInviteLinkRoute);
+app.register(getSubscriberInvitesClicksRoute);
+app.register(getSubscriberInvitesCountRoute);
+app.register(getSubscriberRankingPositionRoute);
+app.register(getRankingRoute);
+app.listen({ host: "0.0.0.0", port: env.PORT || 3333 }).then(() => {
   console.log("HTTP server runing!");
 });

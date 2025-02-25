@@ -1,10 +1,7 @@
 import {
-  env
-} from "../chunk-NFTOJHVO.mjs";
-
-// src/redis/client.ts
-import { Redis } from "ioredis";
-var redis = new Redis(env.REDIS_URL);
+  redis
+} from "../chunk-6VU3PEKP.mjs";
+import "../chunk-T7YZC4SA.mjs";
 export {
   redis
 };
