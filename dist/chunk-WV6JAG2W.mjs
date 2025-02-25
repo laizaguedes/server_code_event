@@ -1,6 +1,6 @@
 import {
   subscribeToEvent
-} from "./chunk-NYOY62FX.mjs";
+} from "./chunk-CCQUBMUH.mjs";
 
 // src/routes/subscribe-to-event-route.ts
 import z from "zod";
@@ -14,8 +14,7 @@ var subscribeToEventRoute = async (app) => {
         tags: ["subscription"],
         body: z.object({
           name: z.string(),
-          email: z.string().email(),
-          referrer: z.string().nullish()
+          email: z.string().email()
         }),
         response: {
           201: z.object({
@@ -25,11 +24,10 @@ var subscribeToEventRoute = async (app) => {
       }
     },
     async (request, reply) => {
-      const { name, email, referrer } = request.body;
+      const { name, email } = request.body;
       const { subscriberId } = await subscribeToEvent({
         name,
-        email,
-        referrerId: referrer
+        email
       });
       return reply.status(201).send({
         subscriberId
