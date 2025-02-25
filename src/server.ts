@@ -77,6 +77,6 @@ app.post('/subscriptions', {
 
 app.register(subscribeToEventRoute)
 
-app.listen({ port: env.PORT }).then(() => {
+app.listen({ port: env.PORT || 3000 }).then(() => {
   console.log('HTTP server runing!')
 })
