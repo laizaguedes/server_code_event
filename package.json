@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev:alt": "tsx watch --env-file=.env src/server.ts",
-    "build:alt": "tsup-node",
-    "start:alt": "node -r dotenv/config dist/server.mjs"
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsup-node",
+    "start": "node -r dotenv/config dist/server.mjs"
   },
   "repository": {
     "type": "git",
