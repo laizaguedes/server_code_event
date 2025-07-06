@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file=.env src/server.ts",
-    "build": "tsup-node",
-    "start": "node -r dotenv/config dist/server.mjs"
+    "dev": "ts-node-dev src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev:alt": "tsx watch --env-file=.env src/server.ts",
+    "build:alt": "tsup-node",
+    "start:alt": "node -r dotenv/config dist/server.mjs"
   },
   "repository": {
     "type": "git",
@@ -23,20 +26,21 @@
     "@fastify/cors": "^10.0.2",
     "@fastify/swagger": "^9.4.2",
     "@fastify/swagger-ui": "^5.2.2",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.6.1",
     "drizzle-orm": "^0.39.3",
     "fastify": "^5.2.1",
     "fastify-type-provider-zod": "^4.0.2",
     "ioredis": "^5.5.0",
     "postgres": "^3.4.5",
-    "zod": "^3.24.2"
+    "zod": "^3.25.74"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/node": "^22.13.4",
+    "@types/node": "^22.16.0",
     "drizzle-kit": "^0.30.4",
+    "ts-node-dev": "^2.0.0",
     "tsup": "^8.3.6",
     "tsx": "^4.19.3",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   }
 }
